@@ -1,0 +1,36 @@
+$emerald: oklch(59.6% 0.145 163.225);
+$dark-gray: oklch(21% 0.034 264.665);
+
+@font-face {
+  font-family: courierPrime;
+  src: url(../Courier_Prime/CourierPrime-Regular.ttf);
+}
+
+html {
+  background-color: $dark-gray;
+  font-family: courierPrime, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 80%;
+  max-width: 125rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1,
+a {
+  color: $emerald;
+}
+
+p {
+  color: white;
+}
