@@ -7,14 +7,12 @@ html {
   font-family: courierPrime, monospace;
   font-weight: 400;
   font-style: normal;
-  scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  overflow: hidden;
   min-height: 100vh;
 }
 
@@ -25,6 +23,10 @@ body {
   height: 100%;
   overflow-y: auto;
   margin: 0 auto;
+}
+
+.enable-snap html,
+.enable-snap body {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
@@ -143,7 +145,7 @@ h1 {
   scroll-snap-align: start;
   color: white;
   min-height: 100dvh;
-  padding-bottom: 20rem;
+  padding-bottom: 18rem;
   padding-top: 2.5rem;
   display: flex;
   align-items: center;

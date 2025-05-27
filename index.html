@@ -17,6 +17,15 @@
 
   <title>Tizian Morshäuser</title>
   <meta name=" description" content="Tizian Morshäuser - Software Developer">
+
+  <script>
+    const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    const isEdge = /Edg/.test(navigator.userAgent);
+
+    if (!isChrome && !isEdge) {
+      document.documentElement.classList.add('enable-snap');
+    }
+  </script>
 </head>
 
 <body>
