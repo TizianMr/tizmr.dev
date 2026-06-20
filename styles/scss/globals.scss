@@ -2,7 +2,6 @@ $accent: #ffed00;
 $background: #000c40;
 $card: #000724;
 
-
 $breakpoints: (
   phone: 600px,
   tablet: 1395px,
@@ -35,12 +34,12 @@ body {
   height: 100%;
   overflow-y: auto;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
-.enable-snap html,
-.enable-snap body {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+section,
+footer {
+  padding-top: 10rem;
 }
 
 h1,

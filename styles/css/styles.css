@@ -22,12 +22,12 @@ body {
   height: 100%;
   overflow-y: auto;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
-.enable-snap html,
-.enable-snap body {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+section,
+footer {
+  padding-top: 10rem;
 }
 
 h1,
@@ -70,8 +70,8 @@ nav {
 }
 
 .nav-link a {
-  color: white;
   text-decoration: none;
+  color: white;
 }
 .nav-link a:hover {
   color: #ffed00;
@@ -137,7 +137,6 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  padding-top: 8rem;
   margin: 0 auto;
 }
 .about span {
@@ -188,8 +187,8 @@ footer {
   }
 }
 footer a {
-  color: white;
   text-decoration: none;
+  color: white;
 }
 footer a:hover {
   color: #ffed00;
