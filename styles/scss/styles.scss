@@ -183,12 +183,20 @@ nav {
   }
 }
 
+// footer
 footer {
   @include page-width;
   @include white-link;
   scroll-snap-align: start;
   padding-bottom: 2rem;
-  text-align: right;
+  text-align: center;
+  
+  div:first-child {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 // about section

@@ -198,7 +198,13 @@ footer a:hover {
 footer {
   scroll-snap-align: start;
   padding-bottom: 2rem;
-  text-align: right;
+  text-align: center;
+}
+footer div:first-child {
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .projects {
