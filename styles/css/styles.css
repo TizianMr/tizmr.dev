@@ -107,6 +107,11 @@ nav {
 .hero span {
   color: #ffed00;
 }
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
 @media (max-width: 1395px) {
   .hero {
     display: inline;
@@ -177,35 +182,6 @@ nav {
   max-width: 25rem;
 }
 
-footer {
-  width: 70%;
-  margin: 0 auto;
-}
-@media (max-width: 1395px) {
-  footer {
-    width: 90%;
-  }
-}
-footer a {
-  text-decoration: none;
-  color: white;
-}
-footer a:hover {
-  color: #ffed00;
-  transition: 0.3s;
-}
-footer {
-  scroll-snap-align: start;
-  padding-bottom: 2rem;
-  text-align: center;
-}
-footer div:first-child {
-  justify-content: center;
-  display: flex;
-  gap: 1rem;
-  padding-bottom: 1rem;
-}
-
 .projects h1 {
   text-align: center;
 }
@@ -233,6 +209,11 @@ footer div:first-child {
   object-fit: cover;
   object-position: top;
 }
+@media (max-width: 600px) {
+  .img-container {
+    height: 40%;
+  }
+}
 
 .card-content a {
   text-decoration: none;
@@ -250,6 +231,15 @@ footer div:first-child {
 .card-content h2 {
   color: white;
 }
+@media (max-width: 600px) {
+  .card-content {
+    display: inline;
+    text-align: center;
+  }
+  .card-content p {
+    padding: 1rem;
+  }
+}
 
 .techstack {
   text-align: center;
@@ -261,6 +251,35 @@ footer div:first-child {
 }
 .techstack ul li {
   margin-top: 0.25rem;
+}
+
+footer {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 1395px) {
+  footer {
+    width: 90%;
+  }
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: #ffed00;
+  transition: 0.3s;
+}
+footer {
+  scroll-snap-align: start;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+footer div:first-child {
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

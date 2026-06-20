@@ -91,6 +91,12 @@ nav {
     color: globals.$accent;
   }
 
+  @include im.media("<=phone") {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
   @include im.media("<=tablet") {
     display: inline;
     text-align: center;
@@ -159,22 +165,6 @@ nav {
   }
 }
 
-// footer
-footer {
-  @include page-width;
-  @include link(white, globals.$accent);
-  scroll-snap-align: start;
-  padding-bottom: 2rem;
-  text-align: center;
-
-  div:first-child {
-    justify-content: center;
-    display: flex;
-    gap: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
 // projects section
 .projects {
   h1 {
@@ -204,6 +194,10 @@ footer {
     object-fit: cover;
     object-position: top;
   }
+
+   @include im.media("<=phone") {
+    height: 40%;
+  }
 }
 
 .card-content {
@@ -214,6 +208,15 @@ footer {
 
   h2 {
     color: white;
+  }
+
+  @include im.media("<=phone") {
+    display: inline;
+    text-align: center;
+
+    p {
+      padding: 1rem;
+    }
   }
 }
 
@@ -228,5 +231,21 @@ footer {
     li {
       margin-top: 0.25rem;
     }
+  }
+}
+
+// footer
+footer {
+  @include page-width;
+  @include link(white, globals.$accent);
+  scroll-snap-align: start;
+  padding-bottom: 2rem;
+  text-align: center;
+
+  div:first-child {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
   }
 }
