@@ -48,11 +48,6 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  margin-block: 0.67em;
-  font-size: 2em;
-}
-
 h1,
 p {
   text-align: center;
@@ -61,10 +56,6 @@ p {
 h1,
 a {
   color: #ffed00;
-}
-
-p {
-  color: white;
 }
 
 /*# sourceMappingURL=imprint.css.map */
