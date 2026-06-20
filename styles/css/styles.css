@@ -1,0 +1,285 @@
+@font-face {
+  font-family: headerFont;
+  src: url(../../assets/fonts/League_Spartan/LeagueSpartan-SemiBold.ttf);
+}
+@font-face {
+  font-family: textFont;
+  src: url(../../assets/fonts/Outfit/Outfit-Regular.ttf);
+}
+html {
+  background: #000c40;
+}
+
+body {
+  font-family: textFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: white;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+section,
+footer {
+  padding-top: 10rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: headerFont, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #ffed00;
+}
+
+nav {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 1395px) {
+  nav {
+    width: 90%;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+@media (max-width: 1395px) {
+  nav {
+    padding: 1rem 0rem;
+  }
+}
+
+.link-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: white;
+}
+.nav-link a:hover {
+  color: #ffed00;
+  transition: 0.3s;
+}
+
+.main-content {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 1395px) {
+  .main-content {
+    width: 90%;
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding-top: 8rem;
+  margin: 0 auto;
+}
+.hero h1 {
+  color: white;
+  font-size: 4rem;
+}
+.hero div,
+.hero aside {
+  display: flex;
+  justify-content: center;
+}
+.hero span {
+  color: #ffed00;
+}
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1395px) {
+  .hero {
+    display: inline;
+    text-align: center;
+  }
+}
+@media (min-width: 2790px) {
+  .hero {
+    width: 50%;
+  }
+}
+.hero img {
+  border-radius: 30px;
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  width: auto\9 ; /* ie8 */
+  box-shadow: 0 10px 15px rgb(0, 0, 0), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+@media (max-width: 1395px) {
+  .hero img {
+    margin: 0 auto;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 0 auto;
+}
+.about span {
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding-right: 1rem;
+}
+@media (max-width: 1395px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .about div:last-child {
+    order: -1;
+  }
+}
+@media (min-width: 2790px) {
+  .about {
+    width: 50%;
+  }
+}
+
+.facts {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-text div {
+  max-width: 25rem;
+}
+
+.projects h1 {
+  text-align: center;
+}
+
+.card {
+  background-color: #000724;
+  height: 60rem;
+  border-radius: 10px;
+}
+@media (min-width: 2790px) {
+  .card {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.img-container {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  height: 60%;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+@media (max-width: 600px) {
+  .img-container {
+    height: 40%;
+  }
+}
+
+.card-content a {
+  text-decoration: none;
+  color: #ffed00;
+}
+.card-content a:hover {
+  color: white;
+  transition: 0.3s;
+}
+.card-content {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.card-content h2 {
+  color: white;
+}
+@media (max-width: 600px) {
+  .card-content {
+    display: inline;
+    text-align: center;
+  }
+  .card-content p {
+    padding: 1rem;
+  }
+}
+
+.techstack {
+  text-align: center;
+}
+.techstack ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.techstack ul li {
+  margin-top: 0.25rem;
+}
+
+footer {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 1395px) {
+  footer {
+    width: 90%;
+  }
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: #ffed00;
+  transition: 0.3s;
+}
+footer {
+  scroll-snap-align: start;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+footer div:first-child {
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

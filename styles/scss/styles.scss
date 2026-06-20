@@ -1,0 +1,251 @@
+@use "globals";
+@use "include-media" as im with (
+  $breakpoints: globals.$breakpoints
+);
+
+@mixin page-width {
+  width: 70%;
+  margin: 0 auto;
+
+  @include im.media("<=tablet") {
+    width: 90%;
+  }
+}
+
+@mixin section-heading {
+  padding-bottom: 4rem;
+
+  @include im.media("<=tablet") {
+    padding-bottom: 0rem;
+  }
+}
+
+@mixin image($max-width) {
+  border-radius: 30px;
+  width: 100%;
+  max-width: $max-width;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+
+@mixin link($color, $hover-color) {
+  a {
+    text-decoration: none;
+    color: $color;
+
+    &:hover {
+      color: $hover-color;
+      transition: 0.3s;
+    }
+  }
+}
+
+// nav bar
+nav {
+  @include page-width;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  @include im.media("<=tablet") {
+    padding: 1rem 0rem;
+  }
+}
+.link-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  @include link(white, globals.$accent);
+}
+
+.main-content {
+  @include page-width;
+}
+
+// hero section
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding-top: 8rem;
+  margin: 0 auto;
+
+  h1 {
+    color: white;
+    font-size: 4rem;
+  }
+
+  div,
+  aside {
+    display: flex;
+    justify-content: center;
+  }
+
+  span {
+    color: globals.$accent;
+  }
+
+  @include im.media("<=phone") {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @include im.media("<=tablet") {
+    display: inline;
+    text-align: center;
+  }
+
+  @include im.media(">=desktop") {
+    width: 50%;
+  }
+
+  img {
+    @include image(22rem);
+    box-shadow:
+      0 10px 15px rgb(0, 0, 0),
+      0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+
+    @include im.media("<=tablet") {
+      margin: 0 auto;
+    }
+  }
+}
+
+// about section
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 0 auto;
+
+  span {
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding-right: 1rem;
+  }
+
+  @include im.media("<=tablet") {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    div:last-child {
+      order: -1;
+    }
+  }
+
+  @include im.media(">=desktop") {
+    width: 50%;
+  }
+}
+
+.facts {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div {
+    max-width: 25rem;
+  }
+}
+
+// projects section
+.projects {
+  h1 {
+    text-align: center;
+  }
+}
+
+.card {
+  background-color: globals.$card;
+  height: 60rem;
+  border-radius: 10px;
+
+  @include im.media(">=desktop") {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.img-container {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  height: 60%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+   @include im.media("<=phone") {
+    height: 40%;
+  }
+}
+
+.card-content {
+  @include link(globals.$accent, white);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  h2 {
+    color: white;
+  }
+
+  @include im.media("<=phone") {
+    display: inline;
+    text-align: center;
+
+    p {
+      padding: 1rem;
+    }
+  }
+}
+
+.techstack {
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+// footer
+footer {
+  @include page-width;
+  @include link(white, globals.$accent);
+  scroll-snap-align: start;
+  padding-bottom: 2rem;
+  text-align: center;
+
+  div:first-child {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+}
