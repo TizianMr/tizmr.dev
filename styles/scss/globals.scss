@@ -3,8 +3,8 @@ $background: #000c40;
 
 $breakpoints: (
   phone: 600px,
-  tablet: 1206px,
-  desktop: 1790px,
+  tablet: 1395px,
+  desktop: 2790px,
 );
 
 @font-face {
@@ -18,11 +18,12 @@ $breakpoints: (
 }
 
 html {
-background: $background;
+  background: $background;
 }
 
 body {
   font-family: textFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: white;
 }
 
 html,

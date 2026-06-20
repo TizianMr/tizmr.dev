@@ -3,11 +3,8 @@
   $breakpoints: globals.$breakpoints
 );
 
-$emerald: oklch(59.6% 0.145 163.225);
-$dark-gray: oklch(21% 0.034 264.665);
-
 @mixin page-width {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 
   @include im.media("<=tablet") {
@@ -90,61 +87,59 @@ nav {
   @include white-link;
 }
 
-footer {
-  @include page-width;
-  @include white-link;
-  scroll-snap-align: start;
-  padding-bottom: 2rem;
-  text-align: right;
-}
-
-// nav bar
 
 
 .main-content {
   @include page-width;
 }
 
+
+
 // hero section
 .hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding-top: 8rem;
+  margin: 0 auto;
+
+  h1 {
+    color: white;
+    font-size: 4rem;
+  }
+
+  span {
+    color: globals.$accent;
+  }
+
+  @include im.media("<=tablet") {
+    display: inline;
+    text-align: center;
+  }
+
+  @include im.media(">=desktop") {
+    width: 50%;
+  }
+
+  img {
+    @include image(22rem);
+    box-shadow:
+      0 10px 15px rgb(0, 0, 0),
+      0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+
+    @include im.media("<=tablet") {
+      margin: 0 auto;
+    }
+  }
+}
+
+footer {
+  @include page-width;
+  @include white-link;
   scroll-snap-align: start;
-  display: flex;
-  min-height: 100dvh;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.hero-name {
-  font-size: 5rem;
-  font-weight: 700;
-  color: globals.$accent;
-  margin-bottom: 1rem;
-  text-align: center;
-
-  @include im.media("<=phone") {
-    font-size: 2rem;
-  }
-}
-
-#hero-subtitle {
-  font-size: 1.5rem;
-  color: globals.$accent;
-  white-space: normal; /* Allow text wrapping */
-  overflow-wrap: break-word; /* Break long words if needed */
-  text-align: center;
-
-  @include im.media("<=phone") {
-    font-size: 1rem;
-  }
-}
-
-.cursor {
-  color: globals.$accent;
-  -webkit-animation: blink 1s 2s infinite;
-  -moz-animation: blink 1s 2s infinite;
-  -o-animation: blink 1s 2s infinite;
-  animation: blink 1s 2s infinite;
+  padding-bottom: 2rem;
+  text-align: right;
 }
 
 // about section
@@ -174,7 +169,9 @@ footer {
 
   img {
     @include image(22rem);
-    box-shadow: 0 10px 15px rgb(0, 0, 0), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 10px 15px rgb(0, 0, 0),
+      0 4px 6px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 
     @include im.media("<=tablet") {

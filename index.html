@@ -1,119 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/371aa8d709.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/css/styles.css" />
-  <script src="scripts/script.js"></script>
-  <script src="https://kit.fontawesome.com/371aa8d709.js" crossorigin="anonymous"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="tizmr" />
 
+    <title>Tizian Morshäuser</title>
+    <meta name="description" content="Tizian Morshäuser - Software Developer" />
 
-  <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-  <link rel="shortcut icon" href="assets/img/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="tizmr" />
+    <script>
+      const isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor);
+      const isEdge = /Edg/.test(navigator.userAgent);
 
-  <title>Tizian Morshäuser</title>
-  <meta name="description" content="Tizian Morshäuser - Software Developer">
+      if (!isChrome && !isEdge) {
+        document.documentElement.classList.add("enable-snap");
+      }
+    </script>
+  </head>
 
-  <script>
-    const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    const isEdge = /Edg/.test(navigator.userAgent);
+  <body>
+    <nav class="nav-link">
+      <img src="./assets/img/logo.svg" height="25rem" alt="tizmr.dev logo" />
+      <div class="link-container">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </nav>
 
-    if (!isChrome && !isEdge) {
-      document.documentElement.classList.add('enable-snap');
-    }
-  </script>
-</head>
+    <main>
+      <div class="main-content">
+        <section class="hero">
+            <h1>
+              <span>Coding</span> with <br /> pixels, powered <br /> by <span>curiosity</span> and <br /> <span>creativity</span>.
+            </h1>
+            <aside>
+              <img src="assets/img/me.jpeg" alt="Tizian Morshäuser" />
+            </aside>
+        </section>
 
-<body>
-  <nav class="nav-link">
-    <img src="./assets/img/logo.svg" height="25rem" alt="tizmr.dev logo" />
-    <div class="link-container">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-    </div>
-  </nav>
-
-  <main>
-    <div class="main-content">
-      <section>
-        <div class="hero">
-          <p class="hero-name">Tizian Morshäuser</p>
-          <p id="hero-subtitle"><span id="animated-text"></span><span class="cursor">_</span></p>
-        </div>
-      </section>
-
-      <section>
-        <div class="about" id="about">
-          <h1>About</h1>
-          <div>
-            <div class="about-text">
-              <h2>Hey there! 👋</h2>
-              <p>
-                I'm Tizian — a software developer from Germany who loves
-                building things for the web. While frontend is my main
-                playground, I’m no stranger to the backend and always curious to
-                learn new tools, languages, and frameworks that make code more
-                fun and powerful.
-                <br /><br />
-
-                This little corner of the internet is where I showcase some of
-                my latest projects — things I’ve built, tinkered with, or just
-                found interesting enough to share. <br /><br />
-
-                Want to say hi? Shoot me a message on LinkedIn. I’m
-                always up for a good chat.
-              </p>
-            </div>
-
-            <img src="assets/img/me.jpeg" alt="Portfolio" />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="projects" id="projects">
-          <h1>Recent projects</h1>
-
-          <div class="project">
-            <img src="assets/img/expense-tracker.png" alt="Portfolio" />
+        <!-- <section>
+          <div class="about" id="about">
+            <h1>About</h1>
             <div>
-              <h2>Expense Tracker</h2>
-              <p>Simple budgeting app</p>
-              <p>
-                Expense Tracker is a simple budgeting app build with Remix to
-                manage and monitor your expenses and budgets. The main purpose
-                of the project was to get to know Remix and Prisma and to expand
-                my knowledge.
-              </p>
-              <div class="project-link">
-                <a href="https://github.com/TizianMr/expense-tracker" target="_blank">Github Repository</a><i
-                  class="fa-solid fa-arrow-up-right-from-square"></i>
+              <div class="about-text">
+                <h2>Hey there! 👋</h2>
+                <p>
+                  I'm Tizian — a software developer from Germany who loves
+                  building things for the web. While frontend is my main
+                  playground, I’m no stranger to the backend and always curious
+                  to learn new tools, languages, and frameworks that make code
+                  more fun and powerful.
+                  <br /><br />
+
+                  This little corner of the internet is where I showcase some of
+                  my latest projects — things I’ve built, tinkered with, or just
+                  found interesting enough to share. <br /><br />
+
+                  Want to say hi? Shoot me a message on LinkedIn. I’m always up
+                  for a good chat.
+                </p>
               </div>
 
-              <div class="project-chips">
-                <div style="--custom-color: #58c4dc">React</div>
-                <div style="--custom-color: #d3aa17">Remix</div>
-                <div style="--custom-color: #689dc9">PostgreSQL</div>
-                <div style="--custom-color: #4a89f4">tremor</div>
-                <div style="--custom-color: #fa722c">Amazon S3</div>
-                <div style="--custom-color: #3178c6">TypeScript</div>
+              <img src="assets/img/me.jpeg" alt="Portfolio" />
+            </div>
+          </div>
+        </section> -->
+
+        <!-- <section>
+          <div class="projects" id="projects">
+            <h1>Recent projects</h1>
+
+            <div class="project">
+              <img src="assets/img/expense-tracker.png" alt="Portfolio" />
+              <div>
+                <h2>Expense Tracker</h2>
+                <p>Simple budgeting app</p>
+                <p>
+                  Expense Tracker is a simple budgeting app build with Remix to
+                  manage and monitor your expenses and budgets. The main purpose
+                  of the project was to get to know Remix and Prisma and to
+                  expand my knowledge.
+                </p>
+                <div class="project-link">
+                  <a
+                    href="https://github.com/TizianMr/expense-tracker"
+                    target="_blank"
+                    >Github Repository</a
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+
+                <div class="project-chips">
+                  <div style="--custom-color: #58c4dc">React</div>
+                  <div style="--custom-color: #d3aa17">Remix</div>
+                  <div style="--custom-color: #689dc9">PostgreSQL</div>
+                  <div style="--custom-color: #4a89f4">tremor</div>
+                  <div style="--custom-color: #fa722c">Amazon S3</div>
+                  <div style="--custom-color: #3178c6">TypeScript</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  </main>
+        </section> -->
+      </div>
+    </main>
 
-  <footer>
-    <div>
-      <a href="imprint/index.html" target="_blank">Impressum</a>
-    </div>
-  </footer>
-</body>
-
+    <footer>
+      <div>
+        <a href="imprint/index.html" target="_blank">Impressum</a>
+      </div>
+    </footer>
+  </body>
 </html>
