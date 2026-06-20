@@ -1,17 +1,4 @@
-$emerald: oklch(59.6% 0.145 163.225);
-$dark-gray: oklch(21% 0.034 264.665);
-
-@font-face {
-  font-family: courierPrime;
-  src: url(../Courier_Prime/CourierPrime-Regular.ttf);
-}
-
-html {
-  background-color: $dark-gray;
-  font-family: courierPrime, monospace;
-  font-weight: 400;
-  font-style: normal;
-}
+@use "globals";
 
 body {
   width: 80%;
@@ -33,7 +20,7 @@ p {
 
 h1,
 a {
-  color: $emerald;
+  color: globals.$accent;
 }
 
 p {
