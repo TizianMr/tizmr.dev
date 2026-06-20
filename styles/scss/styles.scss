@@ -1,24 +1,16 @@
-@import "include-media";
+@use "globals";
+@use "include-media" as im with (
+  $breakpoints: globals.$breakpoints
+);
 
 $emerald: oklch(59.6% 0.145 163.225);
 $dark-gray: oklch(21% 0.034 264.665);
-
-$breakpoints: (
-  phone: 600px,
-  tablet: 1206px,
-  desktop: 1790px,
-);
-
-@font-face {
-  font-family: courierPrime;
-  src: url(../Courier_Prime/CourierPrime-Regular.ttf);
-}
 
 @mixin page-width {
   width: 80%;
   margin: 0 auto;
 
-  @include media("<=tablet") {
+  @include im.media("<=tablet") {
     width: 90%;
   }
 }
@@ -26,7 +18,7 @@ $breakpoints: (
 @mixin section-heading {
   padding-bottom: 4rem;
 
-  @include media("<=tablet") {
+  @include im.media("<=tablet") {
     padding-bottom: 0rem;
   }
 }
@@ -42,11 +34,11 @@ $breakpoints: (
 @mixin emerald-link {
   a {
     text-decoration: none;
-    color: $emerald;
+    color: globals.$accent;
   }
 
   i {
-    color: $emerald;
+    color: globals.$accent;
   }
 
   &:hover {
@@ -68,47 +60,13 @@ $breakpoints: (
     text-decoration: none;
 
     &:hover {
-      color: $emerald;
+      color: globals.$accent;
       transition: 0.3s;
     }
   }
 }
 
 // element selectors
-html {
-  background-color: $dark-gray;
-  font-family: courierPrime, monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-y: auto;
-  margin: 0 auto;
-}
-
-h1 {
-  margin-block: 0.67em;
-  font-size: 2em;
-}
-
-.enable-snap html,
-.enable-snap body {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
 nav {
   @include page-width;
   display: flex;
@@ -119,7 +77,7 @@ nav {
   top: 0;
   z-index: 1000;
 
-  @include media("<=tablet") {
+  @include im.media("<=tablet") {
     padding: 1rem 0rem;
   }
 }
@@ -130,11 +88,6 @@ footer {
   scroll-snap-align: start;
   padding-bottom: 2rem;
   text-align: right;
-}
-
-h1 {
-  color: $emerald;
-  text-align: center;
 }
 
 // nav bar
@@ -159,29 +112,29 @@ h1 {
 .hero-name {
   font-size: 5rem;
   font-weight: 700;
-  color: $emerald;
+  color: globals.$accent;
   margin-bottom: 1rem;
   text-align: center;
 
-  @include media("<=phone") {
+  @include im.media("<=phone") {
     font-size: 2rem;
   }
 }
 
 #hero-subtitle {
   font-size: 1.5rem;
-  color: $emerald;
+  color: globals.$accent;
   white-space: normal; /* Allow text wrapping */
   overflow-wrap: break-word; /* Break long words if needed */
   text-align: center;
 
-  @include media("<=phone") {
+  @include im.media("<=phone") {
     font-size: 1rem;
   }
 }
 
 .cursor {
-  color: $emerald;
+  color: globals.$accent;
   -webkit-animation: blink 1s 2s infinite;
   -moz-animation: blink 1s 2s infinite;
   -o-animation: blink 1s 2s infinite;
@@ -208,7 +161,7 @@ h1 {
     display: flex;
     column-gap: 8rem;
 
-    @include media("<=tablet") {
+    @include im.media("<=tablet") {
       flex-direction: column-reverse;
     }
   }
@@ -218,7 +171,7 @@ h1 {
     box-shadow: 0 10px 15px rgb(0, 0, 0), 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 
-    @include media("<=tablet") {
+    @include im.media("<=tablet") {
       margin: 0 auto;
     }
   }
@@ -266,12 +219,12 @@ h1 {
     @include image(40rem);
     margin: 0 auto;
 
-    @include media(">=tablet") {
+    @include im.media(">=tablet") {
       min-width: 30rem;
     }
   }
 
-  @include media("<=tablet") {
+  @include im.media("<=tablet") {
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
@@ -299,7 +252,7 @@ h1 {
     height: 30px;
     line-height: 30px;
     border-radius: 25px;
-    background-color: var(--custom-color, $emerald);
+    background-color: var(--custom-color, globals.$accent);
   }
 }
 

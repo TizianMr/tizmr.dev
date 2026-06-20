@@ -1,0 +1,51 @@
+$accent: #ffed00;
+$background: #000c40;
+
+$breakpoints: (
+  phone: 600px,
+  tablet: 1206px,
+  desktop: 1790px,
+);
+
+@font-face {
+  font-family: headerFont;
+  src: url(../../assets/fonts/League_Spartan/LeagueSpartan-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: textFont;
+  src: url(../../assets/fonts/Outfit/Outfit-Regular.ttf);
+}
+
+html {
+background: $background;
+}
+
+body {
+  font-family: textFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
+.enable-snap html,
+.enable-snap body {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: headerFont, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: $accent;
+}
