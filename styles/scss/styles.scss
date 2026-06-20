@@ -32,19 +32,8 @@
   a {
     text-decoration: none;
     color: globals.$accent;
-  }
 
-  i {
-    color: globals.$accent;
-  }
-
-  &:hover {
-    a {
-      color: white;
-      transition: 0.3s;
-    }
-
-    i {
+    &:hover {
       color: white;
       transition: 0.3s;
     }
@@ -190,7 +179,7 @@ footer {
   scroll-snap-align: start;
   padding-bottom: 2rem;
   text-align: center;
-  
+
   div:first-child {
     justify-content: center;
     display: flex;
@@ -199,119 +188,58 @@ footer {
   }
 }
 
-// about section
-// .about {
-//   scroll-snap-align: start;
-//   color: white;
-//   min-height: 100dvh;
-//   padding-bottom: 18rem;
-//   padding-top: 2.5rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-
-//   h1 {
-//     @include section-heading;
-//   }
-
-//   div {
-//     display: flex;
-//     column-gap: 8rem;
-
-//     @include im.media("<=tablet") {
-//       flex-direction: column-reverse;
-//     }
-//   }
-
-//   img {
-//     @include image(22rem);
-//     box-shadow:
-//       0 10px 15px rgb(0, 0, 0),
-//       0 4px 6px rgba(0, 0, 0, 0.1);
-//     transform: translateY(-5px);
-
-//     @include im.media("<=tablet") {
-//       margin: 0 auto;
-//     }
-//   }
-
-//   p {
-//     max-width: 25rem;
-//     text-align: justify;
-//   }
-
-//   span {
-//     @include emerald-link;
-
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
-// }
-
-// .about-text {
-//   display: flex;
-//   flex-direction: column !important;
-// }
-
 // projects section
 .projects {
-  scroll-snap-align: start;
-  min-height: 100dvh;
-  padding-top: 2.5rem;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
   h1 {
-    @include section-heading;
+    text-align: center;
   }
 }
 
-.project {
-  display: flex;
-  gap: 5rem;
+.card {
+  background-color: globals.$card;
+  height: 60rem;
+  border-radius: 10px;
+
+  @include im.media(">=desktop") {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.img-container {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  height: 60%;
 
   img {
-    @include image(40rem);
-    margin: 0 auto;
-
-    @include im.media(">=tablet") {
-      min-width: 30rem;
-    }
-  }
-
-  @include im.media("<=tablet") {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 }
 
-.project-link {
+.card-content {
   @include emerald-link;
-  padding: 0.25rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 
-  a {
-    margin-right: 0.5rem;
+  h2 {
+    color: white;
   }
 }
 
-.project-chips {
-  padding-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem; /* spacing between chips */
+.techstack {
+  text-align: center;
 
-  div {
-    display: inline-block;
-    padding: 0 10px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 25px;
-    background-color: var(--custom-color, globals.$accent);
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-top: 0.25rem;
+    }
   }
 }

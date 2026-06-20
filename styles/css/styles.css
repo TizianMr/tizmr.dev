@@ -207,85 +207,61 @@ footer div:first-child {
   padding-bottom: 1rem;
 }
 
-.projects {
-  scroll-snap-align: start;
-  min-height: 100dvh;
-  padding-top: 2.5rem;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 .projects h1 {
-  padding-bottom: 4rem;
+  text-align: center;
 }
-@media (max-width: 1395px) {
-  .projects h1 {
-    padding-bottom: 0rem;
+
+.card {
+  background-color: #000724;
+  height: 60rem;
+  border-radius: 10px;
+}
+@media (min-width: 2790px) {
+  .card {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
-.project {
-  display: flex;
-  gap: 5rem;
+.img-container {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  height: 60%;
 }
-.project img {
-  border-radius: 30px;
+.img-container img {
   width: 100%;
-  max-width: 40rem;
-  height: auto;
-  width: auto\9 ; /* ie8 */
-  margin: 0 auto;
-}
-@media (min-width: 1395px) {
-  .project img {
-    min-width: 30rem;
-  }
-}
-@media (max-width: 1395px) {
-  .project {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
-  }
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
-.project-link a {
+.card-content a {
   text-decoration: none;
   color: #ffed00;
 }
-.project-link i {
-  color: #ffed00;
-}
-.project-link:hover a {
+.card-content a:hover {
   color: white;
   transition: 0.3s;
 }
-.project-link:hover i {
+.card-content {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.card-content h2 {
   color: white;
-  transition: 0.3s;
-}
-.project-link {
-  padding: 0.25rem;
-}
-.project-link a {
-  margin-right: 0.5rem;
 }
 
-.project-chips {
-  padding-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem; /* spacing between chips */
+.techstack {
+  text-align: center;
 }
-.project-chips div {
-  display: inline-block;
-  padding: 0 10px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 25px;
-  background-color: var(--custom-color, #ffed00);
+.techstack ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.techstack ul li {
+  margin-top: 0.25rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

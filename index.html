@@ -23,7 +23,7 @@
     <title>Tizian Morshäuser</title>
     <meta name="description" content="Tizian Morshäuser - Software Developer" />
 
-    <script>
+    <!-- <script>
       const isChrome =
         /Chrome/.test(navigator.userAgent) &&
         /Google Inc/.test(navigator.vendor);
@@ -32,7 +32,7 @@
       if (!isChrome && !isEdge) {
         document.documentElement.classList.add("enable-snap");
       }
-    </script>
+    </script> -->
   </head>
 
   <body>
@@ -95,41 +95,45 @@
           </div>
         </section>
 
-        <!-- <section>
-          <div class="projects" id="projects">
-            <h1>Recent projects</h1>
+        <section class="projects">
+          <h1>Recent projects</h1>
 
-            <div class="project">
-              <img src="assets/img/expense-tracker.png" alt="Portfolio" />
-              <div>
-                <h2>Expense Tracker</h2>
-                <p>Simple budgeting app</p>
-                <p>
-                  Expense Tracker is a simple budgeting app build with Remix to
-                  manage and monitor your expenses and budgets. The main purpose
-                  of the project was to get to know Remix and Prisma and to
-                  expand my knowledge.
-                </p>
-                <div class="project-link">
+          <div class="project">
+            <div class="card">
+              <div class="img-container">
+                <img src="assets/img/expense-tracker.png" alt="Portfolio" />
+              </div>
+              <div class="card-content">
+                <div>
+                  <h2>Expense Tracker | Simple budgeting app</h2>
                   <a
                     href="https://github.com/TizianMr/expense-tracker"
                     target="_blank"
-                    >Github Repository</a
+                    >View code on GitHub</a
                   ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <p>
+                    Expense Tracker is a simple budgeting app build with Remix
+                    to manage and monitor your expenses and budgets. The main
+                    goal of the project was to learn more about Remix and Prisma
+                    and to consolidate and expand my existing knowledge.
+                  </p>
                 </div>
 
-                <div class="project-chips">
-                  <div style="--custom-color: #58c4dc">React</div>
-                  <div style="--custom-color: #d3aa17">Remix</div>
-                  <div style="--custom-color: #689dc9">PostgreSQL</div>
-                  <div style="--custom-color: #4a89f4">tremor</div>
-                  <div style="--custom-color: #fa722c">Amazon S3</div>
-                  <div style="--custom-color: #3178c6">TypeScript</div>
+                <div class="techstack">
+                  <h3>Techstack</h3>
+                  <ul>
+                    <li>React (Remix)</li>
+                    <li>TypeScript</li>
+                    <li>PostgreSQL</li>
+                    <li>tremor</li>
+                    <li>Amazon S3</li>
+                    <li>Prisma</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
     </main>
 
