@@ -63,6 +63,20 @@ nav {
   }
 }
 
+.link-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+}
+.nav-link a:hover {
+  color: #ffed00;
+  transition: 0.3s;
+}
+
 footer {
   width: 80%;
   margin: 0 auto;
@@ -84,15 +98,6 @@ footer {
   scroll-snap-align: start;
   padding-bottom: 2rem;
   text-align: right;
-}
-
-.nav-link a {
-  color: white;
-  text-decoration: none;
-}
-.nav-link a:hover {
-  color: #ffed00;
-  transition: 0.3s;
 }
 
 .main-content {
